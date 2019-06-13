@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-title>
+      Servicio
+    </ion-title>   
+
+    <ion-buttons slot="primary">
+      <ion-button (click)="onLogOut()" color="light" fill="outline">
+        Log Out
+        <ion-icon slot="end" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        
+
+    <!--
+    <ion-title>
+      Solicitar Servicio
+    </ion-title>
+    <ion-button >
+        <ion-icon slot="start" name="star"></ion-icon>
+        Desconectarse
+    </ion-button>
+  -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label position="floating"> Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating"> Correo Electronico</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating"> Telefono</ion-label>
+        <ion-input type="text" [(ngModel)]="telefono" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating"> fecha servicio</ion-label>
+        <ion-input type="date" [(ngModel)]="fecha" name="email"></ion-input>
+    </ion-item>
+    
+    <h2>Servicio/s:</h2>
+    <ion-list>
+      <ion-item>
+        <ion-label>Plomeria</ion-label>
+        <ion-checkbox color="primary">plomeria</ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Electricidad</ion-label>
+        <ion-checkbox color="secondary">electricidad</ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pintura</ion-label>
+        <ion-checkbox color="tertiary">pintura</ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Jardineria</ion-label>
+        <ion-checkbox color="danger">jardineria</ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cerrajeria</ion-label>
+        <ion-checkbox color="medium">cerrajeria</ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block">Enviar</ion-button>
+    
+
+    <!--
+
+    <img class="icon" src="assets/img/logo_joby.png">
+
+    <ion-item>
+        <ion-label position="floating"> Correo Electronico</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label position="floating"> Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="contrasena"></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-button (click)="onSubmitLogin()" expand="block">Iniciar Sesion</ion-button>
+    <br>
+    <ion-button expand="block">Registrarme</ion-button>
+   
+    -->
+
+</ion-content>

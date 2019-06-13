@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>      
+      <ion-icon (click)="regresar()" name="arrow-back"></ion-icon>
+      Iniciar Sesion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <img class="icon" src="assets/img/logo_joby.png">
+
+    <ion-item>
+        <ion-label position="floating"> Correo Electronico</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label position="floating"> Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="contrasena"></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-button (click)="onSubmitLogin()" expand="block">Iniciar Sesion</ion-button>
+    <br>
+    <p text-center routerLink="/registro">Crear Cuenta</p>
+    
+
+</ion-content>

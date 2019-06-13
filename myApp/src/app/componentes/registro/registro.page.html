@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>   
+       
+      <ion-icon (click)="regresar()" name="arrow-back"></ion-icon>        
+      Registro
+    </ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!--
+  <img class="icon" src="assets/img/registro.png">
+
+  <ion-item>
+      <ion-label position="floating"> Correo Electronico</ion-label>
+      <ion-input type="text" [(ngModel)]="email"  name="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label position="floating"> Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"  name="contrasena"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <ion-button expand="block" (click)="onSubmitRegister()">Realizar Registro</ion-button>
+  <br>
+  <p text-center routerLink="/login">Ya tengo cuenta</p>
+  -->
+  
+  <img class="icon" src="assets/img/registro.png">
+
+  <ion-item>
+    <ion-label position="floating"> Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="nombre"  name="nombre"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="genero_usuario">
+      <ion-list-header>
+        <ion-label>Genero</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio slot="start" value="masculino" checked></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Femenino</ion-label>
+        <ion-radio slot="start" value="femenino"></ion-radio>
+      </ion-item>      
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating"> Fecha Nacimiento</ion-label>
+    <ion-input type="date" [(ngModel)]="edad" name="edad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"> Direccion</ion-label>
+    <ion-input type="text" [(ngModel)]="direccion" name="direccion"></ion-input>
+  </ion-item>  
+
+  <ion-item>
+    <ion-label position="floating"> Telefono</ion-label>
+    <ion-input type="number" [(ngModel)]="telefono" name="telefono"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="tipo_usuario">
+      <ion-list-header>
+        <ion-label>Tipo de Usuario</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Cliente</ion-label>
+        <ion-radio slot="start" value="cliente" checked></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>JobyTrabajador</ion-label>
+        <ion-radio slot="start" value="jobytrabajador"></ion-radio>
+      </ion-item>      
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+      <ion-label position="floating"> Correo Electronico</ion-label>
+      <ion-input type="text" [(ngModel)]="email"  name="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label position="floating"> Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="contrasena"></ion-input>
+  </ion-item>
+  
+  <br>
+
+  <ion-button expand="block" (click)="onSubmitRegister()">Realizar Registro</ion-button>
+  <br>
+  <p text-center routerLink="/login">Ya tengo cuenta</p>
+  
+
+  
+</ion-content>
