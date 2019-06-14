@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 export class RegistroPage implements OnInit {
   public nombre : string;
   public genero_usuario : string;
-  public edad : Date;
+  public fecha_nacimiento : Date;
   public direccion : string;
   public telefono : number;
   public tipo_usuario : string;
@@ -28,7 +28,7 @@ export class RegistroPage implements OnInit {
   
   onSubmitRegister(){
     
-    this.autorizacion.register(this.nombre, this.genero_usuario, this.edad, this.direccion, this.telefono, this.tipo_usuario, this.email, this.password).then( auth => {
+    this.autorizacion.register(this.nombre, this.genero_usuario, this.fecha_nacimiento, this.direccion, this.telefono, this.tipo_usuario, this.email, this.password).then( auth => {
       this.router.navigate(['tabs/tab3']);
       //console.log(auth);
     }).catch(err => console.log(err));
