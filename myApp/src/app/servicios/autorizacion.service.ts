@@ -98,7 +98,7 @@ export class AutorizacionService {
   return new Promise((resolve,reject) => {
     this.AFautorizacion.auth.createUserWithEmailAndPassword(email, password).then(res => {
 
-      const uid = res.user.uid;
+      const uid = res.user.uid;     
       this.basedatos.collection('usuarios').doc(uid).set({
         uid: uid,
         nombre: nombre,
@@ -111,7 +111,7 @@ export class AutorizacionService {
         password: password
 
       })
-
+            
       resolve(res)
     }).catch(err => reject(err));
 
