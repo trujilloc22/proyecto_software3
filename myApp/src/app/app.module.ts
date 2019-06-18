@@ -25,9 +25,16 @@ import { AngularFireAuthModule } from "@angular/fire/auth"
 import { AngularFireModule } from "@angular/fire"
 
 /**
- * 
+ *  se imporate el modulo de firestorte
  */
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+/**
+ * importo el modulo que me permite enviar mensajes
+ */
+import { EmailComposer } from "@ionic-native/email-composer/ngx";
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -40,6 +47,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
   providers: [
     StatusBar,
     SplashScreen,
+    EmailComposer,    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
