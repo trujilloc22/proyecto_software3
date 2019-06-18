@@ -44,12 +44,12 @@
 
     <ion-item>
         <ion-label position="floating"> fecha servicio</ion-label>
-        <ion-input type="date" [(ngModel)]="fecha" name="email"></ion-input>
+        <ion-input type="date" [(ngModel)]="fecha_servicio" name="email"></ion-input>
     </ion-item>
     
     
     <ion-list>
-      <ion-radio-group>
+      <ion-radio-group [(ngModel)]="servicio">
         <ion-list-header>
           <ion-label>SELECCIONE UN SERVICIO:</ion-label>
         </ion-list-header>
