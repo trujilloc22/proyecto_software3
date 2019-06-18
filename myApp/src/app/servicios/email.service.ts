@@ -29,9 +29,7 @@ export class EmailService {
    */
   enviarEmail(nombre: string, email: string, telefono: number, direccion: string, fecha_servicio: Date, servicio: string) {
     
-      this.email.isAvailable().then((available : boolean) => {
-        if(available)
-        {
+      
           let correo = {
             to: "jobyServicios@gmail.com",
             cc: [],
@@ -45,12 +43,8 @@ export class EmailService {
           }
       
           this.email.open(correo);
-          this.autorizacion.registrarServicio(nombre,email,telefono,direccion,fecha_servicio,servicio);
-        }
-        else{
-          alert("no se pudo enviar el email");
-        }
-      })
+          //this.autorizacion.registrarServicio(nombre,email,telefono,direccion,fecha_servicio,servicio);
+        
     
   }
 }
