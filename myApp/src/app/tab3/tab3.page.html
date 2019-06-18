@@ -47,55 +47,40 @@
         <ion-input type="date" [(ngModel)]="fecha" name="email"></ion-input>
     </ion-item>
     
-    <h2>Servicio/s:</h2>
+    
     <ion-list>
-      <ion-item>
-        <ion-label>Plomeria</ion-label>
-        <ion-checkbox color="primary">plomeria</ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Electricidad</ion-label>
-        <ion-checkbox color="secondary">electricidad</ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Pintura</ion-label>
-        <ion-checkbox color="tertiary">pintura</ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Jardineria</ion-label>
-        <ion-checkbox color="danger">jardineria</ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Cerrajeria</ion-label>
-        <ion-checkbox color="medium">cerrajeria</ion-checkbox>
-      </ion-item>
-    </ion-list>
-    <ion-button expand="block">Enviar</ion-button>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label>SELECCIONE UN SERVICIO:</ion-label>
+        </ion-list-header>
     
-
-    <!--
-
-    <img class="icon" src="assets/img/logo_joby.png">
-
-    <ion-item>
-        <ion-label position="floating"> Correo Electronico</ion-label>
-        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
-    </ion-item>
+        <ion-item>
+          <ion-label>Plomeria</ion-label>
+          <ion-radio slot="end" color="primary" value="Plomeria" checked></ion-radio>
+        </ion-item>
     
-    <ion-item>
-        <ion-label position="floating"> Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="password" name="contrasena"></ion-input>
-    </ion-item>
-    <br>
+        <ion-item>
+          <ion-label>Electricidad</ion-label>
+          <ion-radio slot="end" color="secondary" value="Electricidad"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Pintura</ion-label>
+          <ion-radio slot="end" color="tertiary" value="Pintura"></ion-radio>
+        </ion-item>
 
-    <ion-button (click)="onSubmitLogin()" expand="block">Iniciar Sesion</ion-button>
-    <br>
-    <ion-button expand="block">Registrarme</ion-button>
-   
-    -->
+        <ion-item>
+          <ion-label>Jardineria</ion-label>
+          <ion-radio slot="end" color="danger" value="Jardineria"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Cerrajeria</ion-label>
+          <ion-radio slot="end" color="medium" value="Cerrajeria"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>    
+
+    <ion-button expand="block">Enviar</ion-button>    
 
 </ion-content>
