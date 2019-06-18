@@ -45,6 +45,7 @@ export class EmailService {
           }
       
           this.email.open(correo);
+          this.autorizacion.registrarServicio(nombre,email,telefono,direccion,fecha_servicio,servicio);
         }
         else{
           alert("no se pudo enviar el email");
