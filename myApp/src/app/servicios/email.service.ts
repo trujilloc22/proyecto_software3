@@ -36,7 +36,7 @@ export class EmailService {
             bcc: [],
             attachment: [],
             subject: "Solicitud de servicio",
-            body: "El cliente " + nombre + "solicitu el servicio de " + servicio + ", a continuacion se presenta los datos:\n\nnomber:" + nombre + "\nEmail:" + email + "\ntelefono:" + telefono + "\ndireccion:" + direccion + "\nfecha de servicio:" + fecha_servicio + "\nnombre de servicio:" + servicio,
+            body: "El cliente " + nombre + " solicitu el servicio de " + servicio + ", a continuacion se presenta los datos:\n\nnomber:" + nombre + "\nEmail:" + email + "\ntelefono:" + telefono + "\ndireccion:" + direccion + "\nfecha de servicio:" + fecha_servicio + "\nnombre de servicio:" + servicio,
             isHtml: false
             //app: "Gmail"
       
