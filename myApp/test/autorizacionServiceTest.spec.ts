@@ -3,7 +3,7 @@ import { AngularFireAuth, AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { AutorizacionService } from "../src/app/servicios/autorizacion.service";
 
-//const autorizacion = require('../src/app/servicios/autorizacion.service.ts');
+const autorizacion = require('../src/app/servicios/autorizacion.service.ts');
 
 describe('Test del los servicio de autorizacion', () => {
 
