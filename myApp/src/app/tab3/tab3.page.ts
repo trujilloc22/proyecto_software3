@@ -23,7 +23,7 @@ export class Tab3Page {
   //Variables que me ayudaran a capturar los valores de email y password
   nombre : string;
   correo : string;
-  telefono: string;
+  telefono: number;
   direccion: string;
   fecha_servicio: Date;
   servicio: string;
