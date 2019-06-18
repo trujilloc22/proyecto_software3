@@ -8,13 +8,16 @@ import { Injectable } from '@angular/core';
  * importo el modulo que me permite enviar mensajes
  */
 import { EmailComposer } from "@ionic-native/email-composer/ngx";
+import { AutorizacionService } from "../servicios/autorizacion.service";
+import { promise } from 'protractor';
+import { reject } from 'q';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
 
-  constructor(public email: EmailComposer) { }
+  constructor(public email: EmailComposer, private autorizacion : AutorizacionService) { }
 
   /**
    * Permite enviar un correo a jobymultiservicios con la informacion de quien solicita el servicio
@@ -25,18 +28,28 @@ export class EmailService {
    * @param servicio string que repsernta el nombre del servicio que fue solicitado
    */
   enviarEmail(nombre: string, email: string, telefono: number, direccion: string, fecha_servicio: Date, servicio: string) {
-    let correo = {
-      to: "jobyServicios@gmail.com",
-      cc: [],
-      bcc: [],
-      attachment: [],
-      subject: "Solicitud de servicio",
-      body: "El cliente " + nombre + "solicitu el servicio de " + servicio + ", a continuacion se presenta los datos:\n\nnomber:" + nombre + "\nEmail:" + email + "\ntelefono:" + telefono + "\ndireccion:" + direccion + "\nfecha de servicio:" + fecha_servicio + "\nnombre de servicio:" + servicio,
-      isHtml: false
-      //app: "Gmail"
-
-    }
-
-    this.email.open(correo);
+    
+      this.email.isAvailable().then((available : boolean) => {
+        if(available)
+        {
+          let correo = {
+            to: "jobyServicios@gmail.com",
+            cc: [],
+            bcc: [],
+            attachment: [],
+            subject: "Solicitud de servicio",
+            body: "El cliente " + nombre + "solicitu el servicio de " + servicio + ", a continuacion se presenta los datos:\n\nnomber:" + nombre + "\nEmail:" + email + "\ntelefono:" + telefono + "\ndireccion:" + direccion + "\nfecha de servicio:" + fecha_servicio + "\nnombre de servicio:" + servicio,
+            isHtml: false
+            //app: "Gmail"
+      
+          }
+      
+          this.email.open(correo);
+        }
+        else{
+          alert("no se pudo enviar el email");
+        }
+      })
+    
   }
 }
