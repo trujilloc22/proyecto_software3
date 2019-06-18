@@ -54,10 +54,22 @@ export class Tab3Page {
       alert('Faltan campos por llenar');
     }else{
       this.autorizacionService.registrarServicio(this.nombre,this.email,this.telefono,this.direccion,this.fecha_servicio,this.servicio);
-      this.router.navigate(['tabs/tab3']);
+      this.limpiarCampos();
     }
     
     
+  }
+
+  /**
+   * Metodo que se encarga de limpiar los campos
+   */
+  limpiarCampos(){
+    this.nombre = null;
+    this.fecha_servicio = null;
+    this.telefono = null;
+    this.email = null;
+    this.servicio = null;
+    this.direccion = null; 
   }
 
     
