@@ -25,7 +25,7 @@ export class Tab3Page {
   correo : string;
   telefono: string;
   direccion: string;
-  fecha_servicio: string;
+  fecha_servicio: Date;
   servicio: string;
 
   constructor(private autorizacionService : AutorizacionService, public router : Router){}
