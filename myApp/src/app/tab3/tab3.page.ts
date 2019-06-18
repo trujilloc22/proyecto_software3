@@ -11,6 +11,11 @@ import { AutorizacionService } from "../servicios/autorizacion.service";
 import { Router } from "@angular/router";
 import { auth } from 'firebase';
 
+/**
+ * importo el servicio que creamos de email
+ */
+import { EmailService } from "../servicios/email.service";
+
 
 
 @Component({
