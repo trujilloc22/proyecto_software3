@@ -128,7 +128,7 @@ export class AutorizacionService {
  */
 registrarServicio(nombre : string, email: string, telefono : number, direccion: string, fecha_servicio : Date, servicio : string){
   
-  this.basedatos.collection('servicios').doc(email+""+fecha_servicio).set({
+  this.basedatos.collection('servicios').doc(email+"-"+fecha_servicio).set({
     nombre: nombre,
     email: email,
     telefono: telefono,
