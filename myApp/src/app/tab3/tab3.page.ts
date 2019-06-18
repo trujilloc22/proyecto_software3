@@ -24,6 +24,7 @@ export class Tab3Page {
   nombre : string;
   correo : string;
   telefono: string;
+  direccion: string;
   fecha_servicio: string;
   servicio: string;
 
