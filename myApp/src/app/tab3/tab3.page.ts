@@ -54,6 +54,7 @@ export class Tab3Page {
       alert('Faltan campos por llenar');
     }else{
       this.autorizacionService.registrarServicio(this.nombre,this.email,this.telefono,this.direccion,this.fecha_servicio,this.servicio);
+      this.router.navigate(['tabs/tab3']);
     }
     
     
