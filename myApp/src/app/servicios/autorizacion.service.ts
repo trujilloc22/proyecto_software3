@@ -126,14 +126,15 @@ export class AutorizacionService {
  * @param direccion strign que representa la direccion del usuario que solicita el servicio
  * @param fecha_servicio Date que representa la fecha de en la que se necesta el servicio solicitado
  */
-registrarServicio(nombre : string, email: string, telefono : number, direccion: string, fecha_servicio : Date){
+registrarServicio(nombre : string, email: string, telefono : number, direccion: string, fecha_servicio : Date, servicio : string){
   
   this.basedatos.collection('servicios').doc(email+""+fecha_servicio).set({
     nombre: nombre,
     email: email,
     telefono: telefono,
     direccion: direccion,
-    fecha_servicio: fecha_servicio
+    fecha_servicio: fecha_servicio,
+    nombre_servicio: servicio
   })
 
 }
