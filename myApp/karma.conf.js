@@ -10,12 +10,19 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jspm', 'jasmine'],
+
+    plugins: ['karma-jspm', 'karma-chrome-launcher', 'karma-jasmine'],
+
+    jspm: {
+      // Edit this to your needs
+      loadFiles: ['src/**/*.js', 'test/*.js']
+  },
 
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*.spec.js'
+      'test/**/*.spec.ts'
     ],
 
 
