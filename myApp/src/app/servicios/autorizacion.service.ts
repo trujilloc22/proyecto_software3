@@ -17,6 +17,7 @@ import { resolve } from 'dns';
  * Importamos desde los modulos de firebase la base de datos que es firestore
  */
 import { AngularFirestore } from "@angular/fire/firestore";
+import { reject } from 'q';
 
 @Injectable({
   providedIn: 'root'
@@ -83,8 +84,16 @@ export class AutorizacionService {
   */
 
   /**
-   * Metodo que permite realizar el registro completo en la base de datos de firebase
-  */ 
+   * Metodo que permite realizar el registro completo de un usuario en la base de datos de firebase
+   * @param nombre string que reprsenta el nombre del usuario
+   * @param genero string que representa el genero del usuario:(masculino-femenino)
+   * @param edad Date que representa la fecha de nacimiento del usuario
+   * @param direccion strign que representa la direccion del usuario
+   * @param telefono number que representa el telefono del usuario
+   * @param tipo_suario string que representa el tipo de usuario:(cliente-JobyTrabajador)
+   * @param email string que representa el email del usuario
+   * @param password string que representa el password del usuario
+   */ 
  register(nombre : string, genero : string, edad : Date, direccion : string, telefono : number, tipo_suario: string, email : string, password : string){
   return new Promise((resolve,reject) => {
     this.AFautorizacion.auth.createUserWithEmailAndPassword(email, password).then(res => {
@@ -107,6 +116,26 @@ export class AutorizacionService {
     }).catch(err => reject(err));
 
   })
+}
+
+/**
+ * Metodo que permite registrar un servicio en la base datos
+ * @param nombre string que reprsenta el nombre del usuario que solicita el servicio
+ * @param email string que representa el email del usuario que solicita el servicio
+ * @param telefono number que representa el telefono del usuario que solicita el servicio
+ * @param direccion strign que representa la direccion del usuario que solicita el servicio
+ * @param fecha_servicio Date que representa la fecha de en la que se necesta el servicio solicitado
+ */
+registrarServicio(nombre : string, email: string, telefono : number, direccion: string, fecha_servicio : Date){
+  
+  this.basedatos.collection('servicios').doc(email+""+fecha_servicio).set({
+    nombre: nombre,
+    email: email,
+    telefono: telefono,
+    direccion: direccion,
+    fecha_servicio: fecha_servicio
+  })
+
 }
   
   
