@@ -33,7 +33,7 @@ export class Tab3Page {
   fecha_servicio: Date;
   servicio: string;
 
-  constructor(private autorizacionService : AutorizacionService, public router : Router){}
+  constructor(private autorizacionService : AutorizacionService, public router : Router, private emailService : EmailService){}
   
   /**
    * Metodo que llama al metodo principal de log out
@@ -54,11 +54,11 @@ export class Tab3Page {
     /**
      * validacion de los datos
      */
-    if((this.nombre==null) || (this.email == null) || (this.telefono==null) || (this.direccion==null) || (this.servicio==null))
+    if((this.nombre==null) || (this.email == null) || (this.telefono==null) || (this.direccion==null) || (this.fecha_servicio == null) || (this.servicio==null))
     {
       alert('Faltan campos por llenar');
     }else{
-      this.autorizacionService.registrarServicio(this.nombre,this.email,this.telefono,this.direccion,this.fecha_servicio,this.servicio);
+      this.emailService.enviarEmail(this.nombre, this.email, this.telefono, this.direccion,this.fecha_servicio,this.servicio);
       this.limpiarCampos();
     }
     
