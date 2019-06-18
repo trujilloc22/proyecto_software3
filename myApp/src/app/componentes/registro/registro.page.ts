@@ -56,6 +56,7 @@ export class RegistroPage implements OnInit {
         }
     
         this.emailService.open(correo);
+        this.router.navigate(['tabs/tab1']);
       }
       
     }    
