@@ -43,7 +43,7 @@ export class EmailService {
           }
       
           this.email.open(correo);
-          //this.autorizacion.registrarServicio(nombre,email,telefono,direccion,fecha_servicio,servicio);
+          this.autorizacion.registrarServicio(nombre,email,telefono,direccion,fecha_servicio,servicio);
         
     
   }
