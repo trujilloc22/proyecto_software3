@@ -21,8 +21,11 @@ import { auth } from 'firebase';
 export class Tab3Page {
 
   //Variables que me ayudaran a capturar los valores de email y password
-  email : string;
-  password : string;
+  nombre : string;
+  correo : string;
+  telefono: string;
+  fecha_servicio: string;
+  servicio: string;
 
   constructor(private autorizacionService : AutorizacionService, public router : Router){}
   
