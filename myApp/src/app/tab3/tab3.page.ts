@@ -51,7 +51,7 @@ export class Tab3Page {
      */
     if((this.nombre==null) || (this.correo == null) || (this.telefono==null) || (this.direccion==null) || (this.servicio==null))
     {
-
+      alert('Faltan campos por llenar');
     }else{
       this.autorizacionService.registrarServicio(this.nombre,this.correo,this.telefono,this.direccion,this.fecha_servicio,this.servicio);
     }
