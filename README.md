@@ -1,4 +1,4 @@
-# proyecto_software3
+# proyecto_software3 branch integracion continua
 
 Contiene el versionamiento del proyecto de la materia de Software 3 de la universidad del quindio
 
