@@ -44,8 +44,11 @@ export class AutenticacionGuard implements CanActivate {
         
         if(isNullOrUndefined(auth)){
           
+          /*
           this.router.navigate(['/login']);
           return false;
+          */
+          return true;
           
         } else{
           
